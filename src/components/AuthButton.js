@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { API_URL } from "../App";
 import { Button } from "react-bootstrap";
 
 class AuthButton extends Component {
   state = {
     isAuthenticated: false,
     user: null,
+    API_URL: process.env.REACT_APP_API_URL,
   };
 
   componentDidMount() {
     // Check auth
     axios
-      .get(`${API_URL}/check-auth`, { withCredentials: true })
+      .get(`${this.state.API_URL}/check-auth`, { withCredentials: true })
       .then((res) => {
         this.setState({
           isAuthenticated: true,
@@ -30,7 +30,7 @@ class AuthButton extends Component {
     // Change location to /logout server route while passing it
     // the URL for redirecting back to a client
     const url = `${window.location.protocol}//${window.location.host}`;
-    window.location = `${API_URL}/logout?from=${url}`;
+    window.location = `${this.state.API_URL}/logout?from=${url}`;
   };
 
   render() {

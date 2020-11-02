@@ -67,6 +67,8 @@ export default function Hero() {
             <a
               className="ferrari-hover"
               href="https://www.ferrari.com/en-CA/auto/458-italia"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <p className="vehicle-ferrari">
                 <strong> 458 Italia</strong>
@@ -98,6 +100,8 @@ export default function Hero() {
             <a
               className="lambo-hover"
               href="https://www.lamborghini.com/en-en/models/aventador"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <p className="vehicle-lambo2">
                 <strong>Aventador </strong>
@@ -122,7 +126,12 @@ export default function Hero() {
                 <strong> Mclaren</strong>
               </p>
             </a>
-            <a className="mclaren-hover" href="https://www.mclaren.com/">
+            <a
+              className="mclaren-hover"
+              href="https://www.mclaren.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <p className="vehicle-p1">
                 <strong> P1</strong>
               </p>

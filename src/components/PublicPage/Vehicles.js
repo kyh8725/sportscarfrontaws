@@ -8,8 +8,7 @@ export default class Vehicles extends Component {
   };
 
   componentDidMount() {
-    const API_URL = process.env.REACT_APP_API_URL;
-    axios.get(`${API_URL}/vehicles/allvehicles`).then((response) => {
+    axios.get(`http://localhost:5000/vehicles/allvehicles`).then((response) => {
       this.setState({ vehicles: response.data });
     });
   }

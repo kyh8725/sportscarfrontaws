@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
 import axios from "axios";
-import { API_URL } from "../App";
 
 class PrivateRoute extends Component {
   state = {
     isAuthenticating: true,
     isAuthenticated: false,
     user: null,
+    API_URL: process.env.REACT_APP_API_URL,
   };
 
   componentDidMount() {
@@ -15,7 +15,7 @@ class PrivateRoute extends Component {
     // don't forget to set axios to send requests withCredentials
     // it allows for cookies to be passed to backend
     axios
-      .get(`${API_URL}/check-auth`, { withCredentials: true })
+      .get(`${this.state.API_URL}/check-auth`, { withCredentials: true })
       .then((res) => {
         this.setState({
           isAuthenticating: false,
@@ -51,7 +51,7 @@ class PrivateRoute extends Component {
           ) : (
             <Redirect
               to={{
-                pathname: "login",
+                pathname: "/login",
                 state: { from: props.location },
               }}
             />

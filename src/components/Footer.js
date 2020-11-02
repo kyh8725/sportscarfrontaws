@@ -118,7 +118,7 @@ export default function () {
               </a>
             </li>
             <li>
-              <a href="/vehicles">Financing Options</a>
+              <a href="/contact">Financing Options</a>
             </li>
           </ul>
         </div>
@@ -129,13 +129,13 @@ export default function () {
               <a href="/contact">Contact Us</a>
             </li>
             <li>
-              <a href="/vehicles">Visit Us</a>
+              <a href="/contact">Visit Us</a>
             </li>
             <li>
-              <a href="/vehicles">Career</a>
+              <a href="/contact">Career</a>
             </li>
             <li>
-              <a href="/vehicles">FAQ</a>
+              <a href="/contact">FAQ</a>
             </li>
           </ul>
         </div>
@@ -157,17 +157,13 @@ export default function () {
             className="fa fa-linkedin"
             target="/blank"
             rel="noopener noreferrer"
-          >
-            {}
-          </a>
+          ></a>
           <a
             href="https://www.github.com/kyh8725"
             className="fa fa-github"
             target="/blank"
             rel="noopener noreferrer"
-          >
-            {}
-          </a>
+          ></a>
         </div>
       </div>
     </footer>

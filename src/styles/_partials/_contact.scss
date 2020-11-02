@@ -27,12 +27,12 @@
 #name,
 #email,
 #dropdown,
-#textarea {
+#comment {
   width: 60vw;
   margin: 1rem 0;
   height: 3rem;
 }
-#textarea {
+#comment {
   min-height: 10rem;
 }
 .radio-div {
@@ -58,7 +58,7 @@
   #name,
   #email,
   #dropdown,
-  #textarea {
+  #comment {
     width: 50vw;
   }
 }
