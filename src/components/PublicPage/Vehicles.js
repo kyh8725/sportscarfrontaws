@@ -7,8 +7,8 @@ export default class Vehicles extends Component {
     vehicles: [],
   };
 
-  componentDidMount() {
-    axios.get(`/vehicles/allvehicles`).then((response) => {
+  async componentDidMount() {
+    await axios.get(`/vehicles/allvehicles`).then((response) => {
       this.setState({ vehicles: response.data });
     });
   }
