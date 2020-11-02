@@ -14,6 +14,7 @@ export default class Vehicles extends Component {
   }
 
   vehicleCard = () => {
+    console.log(this.state.vehicles);
     const card = this.state.vehicles.map((vehicle) => {
       return (
         <>
@@ -45,12 +46,14 @@ export default class Vehicles extends Component {
   };
 
   render() {
-    return (
-      <section className="vehicles">
-        <h3 className="vehicles__title">BUILD & PRICE</h3>
-        <h2 className="vehicles__sub-title">Select your Model</h2>
-        <div className="vehicles__models">{this.vehicleCard()}</div>
-      </section>
-    );
+    if (this.state.vehicles.length !== 0) {
+      return (
+        <section className="vehicles">
+          <h3 className="vehicles__title">BUILD & PRICE</h3>
+          <h2 className="vehicles__sub-title">Select your Model</h2>
+          <div className="vehicles__models">{this.vehicleCard()}</div>
+        </section>
+      );
+    }
   }
 }
