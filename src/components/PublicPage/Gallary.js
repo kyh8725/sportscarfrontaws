@@ -1,13 +1,21 @@
 import React from "react";
 import ReactFancyBox from "react-fancybox";
-import pic1 from "https://www.hdcarwallpapers.com/walls/mclaren_p1_supercars_4k-HD.jpg";
-import pic2 from "https://www.wsupercars.com/wallpapers/Porsche/2019-Porsche-911-GT3-RS-001-1080.jpg";
-import pic3 from "https://cdn.motor1.com/images/mgl/kPWbN/s1/mclaren-senna-victory-grey.jpg";
-import pic4 from "https://www.topgear.com/sites/default/files/styles/16x9_1858w/public/news-listicle/image/1_70.jpg?itok=J6JLQWWk";
-import pic5 from "https://robbreport.com/wp-content/uploads/2016/12/2017-lamborghini-aventador-s-011.jpg?w=1024";
-import pic6 from "https://cdn.motor1.com/images/mgl/vyjQb/s3/ferrari-488-pista-prova-sul-circuito-di-fiorano.jpg";
+import "react-fancybox/lib/fancybox.css";
 
 export default function Gallery() {
+  const pic1 =
+    "https://www.hdcarwallpapers.com/walls/mclaren_p1_supercars_4k-HD.jpg";
+  const pic2 =
+    "https://www.wsupercars.com/wallpapers/Porsche/2019-Porsche-911-GT3-RS-001-1080.jpg";
+  const pic3 =
+    "https://cdn.motor1.com/images/mgl/kPWbN/s1/mclaren-senna-victory-grey.jpg";
+  const pic4 =
+    "https://www.topgear.com/sites/default/files/styles/16x9_1858w/public/news-listicle/image/1_70.jpg?itok=J6JLQWWk";
+  const pic5 =
+    "https://robbreport.com/wp-content/uploads/2016/12/2017-lamborghini-aventador-s-011.jpg?w=1024";
+  const pic6 =
+    "https://cdn.motor1.com/images/mgl/vyjQb/s3/ferrari-488-pista-prova-sul-circuito-di-fiorano.jpg";
+
   return (
     <>
       <div className="project__title-wrap">
