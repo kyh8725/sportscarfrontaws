@@ -9,18 +9,3 @@
 @import "./_partials/garage";
 @import "./_partials/contact";
 @import "./_partials/vehicles";
-
-body {
-  margin: 0 1rem;
-}
-a {
-  text-decoration: none;
-  &:hover {
-    text-decoration: none;
-  }
-}
-@include desk {
-  body {
-    margin: 0 10rem;
-  }
-}
