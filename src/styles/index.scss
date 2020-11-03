@@ -9,4 +9,13 @@
 @import "./_partials/garage";
 @import "./_partials/contact";
 @import "./_partials/vehicles";
-@import "react-fancybox/lib/fancybox.css";
+@import "./_partials/spinner";
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap");
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}

@@ -1,20 +1,21 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
+import Spinner from "react-bootstrap/Spinner";
 import axios from "axios";
 
 export default class Vehicles extends Component {
   state = {
     vehicles: [],
+    API_URL: process.env.REACT_APP_API_URL,
   };
 
-  async componentDidMount() {
-    await axios.get(`/vehicles/allvehicles`).then((response) => {
+  componentDidMount() {
+    axios.get(`${this.state.API_URL}/vehicles/allvehicles`).then((response) => {
       this.setState({ vehicles: response.data });
     });
   }
 
   vehicleCard = () => {
-    console.log(this.state.vehicles);
     const card = this.state.vehicles.map((vehicle) => {
       return (
         <>
@@ -46,7 +47,13 @@ export default class Vehicles extends Component {
   };
 
   render() {
-    if (this.state.vehicles.length !== 0) {
+    if (this.state.vehicles.length === 0) {
+      return (
+        <div className="spinner-wrap">
+          <Spinner animation="border" />
+        </div>
+      );
+    } else {
       return (
         <section className="vehicles">
           <h3 className="vehicles__title">BUILD & PRICE</h3>
