@@ -1,3 +1,143 @@
 .garage {
   text-align: center;
+  &__title {
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+  &__app {
+    width: 100%;
+    &-top {
+      margin: 1.5rem 2rem;
+      &-menu {
+        margin-top: 1rem;
+        &:hover {
+          cursor: pointer;
+        }
+        &-title {
+          border-bottom: 1px solid rgb(219, 219, 219);
+          padding-bottom: 1rem;
+          margin: 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 1rem;
+        }
+      }
+    }
+    &-bottom {
+      &-title {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  &__collapse {
+    list-style: none;
+    padding: 0;
+    li {
+      border-bottom: 1px solid rgb(219, 219, 219);
+      padding: 1rem 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: grey;
+    }
+  }
+
+  &__car-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    margin: 1rem;
+    padding: 1rem;
+
+    &-yourcar {
+      font-weight: lighter;
+    }
+    &-button {
+      width: 100%;
+      button {
+        margin: 1rem 1rem;
+      }
+    }
+
+    &-bottom {
+      img {
+        transform: rotate(0deg);
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+        max-width: 15rem;
+        max-height: 30rem;
+      }
+    }
+  }
+}
+
+@include small {
+  .garage {
+    margin: 0 3rem;
+  }
+}
+
+@include tablet {
+  .garage {
+    &__app {
+      display: flex;
+      justify-content: center;
+      flex: 1;
+      &-top {
+        flex: 0.3;
+      }
+      &-bottom {
+        flex: 0.7;
+      }
+    }
+  }
+}
+
+@include desk {
+  .garage {
+    &__app {
+      flex: 1;
+      &-top {
+        flex: 0.4;
+        max-width: 25rem;
+      }
+      &-bottom {
+        flex: 0.6;
+      }
+    }
+    margin: 2rem 2rem;
+    &__car-card {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      max-height: 25rem;
+      max-width: 65rem;
+      &-top {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-right: 1rem;
+      }
+      &-bottom {
+        img {
+          max-width: 37.5rem;
+          max-height: 20rem;
+        }
+      }
+      &-button {
+        flex: 0.1;
+      }
+    }
+  }
 }

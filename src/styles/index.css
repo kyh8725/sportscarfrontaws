@@ -4,6 +4,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+.header span {
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
 .header a,
 .header img {
   margin: auto 1rem;
@@ -422,17 +428,26 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
+.footer__top h5 span {
+  margin-left: 1rem;
+}
+
 .footer__top ul,
 .footer__top li {
   list-style-type: none;
-  text-align: left;
+  text-align: center;
   padding: 0;
+  font-size: 1.2rem;
 }
 
 .footer__top li a {
@@ -446,15 +461,20 @@
 }
 
 .footer__top-first, .footer__top-second, .footer__top-third {
+  cursor: pointer;
+  text-align: center;
   -webkit-box-flex: 0.33;
       -ms-flex: 0.33;
           flex: 0.33;
-  margin: 1rem;
+  margin: 2rem 0;
 }
 
 .footer__top-first-title, .footer__top-second-title, .footer__top-third-title {
   font-weight: bolder;
-  border-bottom: 2px solid #303841;
+}
+
+.footer__top-second, .footer__top-third {
+  margin-top: 0;
 }
 
 .footer__bottom {
@@ -478,13 +498,32 @@
   list-style-type: none;
 }
 
+.footer__bottom-left {
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__bottom-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
 .footer .fa {
   padding: 20px;
   font-size: 2.5rem;
   width: 2.5rem;
   text-align: center;
   text-decoration: none;
-  margin: 0.1rem 0.5rem;
+  margin: 0;
   border-radius: 50%;
 }
 
@@ -492,8 +531,48 @@
   color: #6b6b6b;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
-  -webkit-transform: translateY(0.2rem);
-          transform: translateY(0.2rem);
+  -webkit-transform: translateX(0.2rem);
+          transform: translateX(0.2rem);
+}
+
+@media only screen and (min-width: 440px) {
+  .footer__bottom-left {
+    font-size: 1rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .footer .fa {
+    margin: 0.1rem 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .footer__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .footer__top ul {
+    display: block !important;
+  }
+  .footer__top span {
+    display: none !important;
+  }
+  .footer__top-first, .footer__top-second, .footer__top-third {
+    cursor: context-menu;
+  }
+  .footer__top-first-title, .footer__top-second-title, .footer__top-third-title {
+    border-bottom: 2px solid #303841;
+  }
+  .footer__top-second, .footer__top-third {
+    margin-top: 2rem;
+  }
 }
 
 @media only screen and (min-width: 993px) {
@@ -504,6 +583,8 @@
 
 @media only screen and (min-width: 1440px) {
   .footer__top {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     padding: 0 10rem;
   }
 }
@@ -530,6 +611,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: "Mulish";
+  font-style: italic;
 }
 
 .project-tile {
@@ -899,6 +982,10 @@
           align-items: center;
 }
 
+.discover-img {
+  overflow: hidden;
+}
+
 .card {
   width: 20rem;
   margin: 1rem;
@@ -924,6 +1011,198 @@
 
 .garage {
   text-align: center;
+}
+
+.garage__title {
+  font-weight: lighter;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem;
+}
+
+.garage__app {
+  width: 100%;
+}
+
+.garage__app-top {
+  margin: 1.5rem 2rem;
+}
+
+.garage__app-top-menu {
+  margin-top: 1rem;
+}
+
+.garage__app-top-menu:hover {
+  cursor: pointer;
+}
+
+.garage__app-top-menu-title {
+  border-bottom: 1px solid #dbdbdb;
+  padding-bottom: 1rem;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+}
+
+.garage__app-bottom-title {
+  margin-bottom: 2rem;
+}
+
+.garage__collapse {
+  list-style: none;
+  padding: 0;
+}
+
+.garage__collapse li {
+  border-bottom: 1px solid #dbdbdb;
+  padding: 1rem 0;
+}
+
+.garage__collapse a {
+  text-decoration: none;
+  color: grey;
+}
+
+.garage__car-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid grey;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.garage__car-card-yourcar {
+  font-weight: lighter;
+}
+
+.garage__car-card-button {
+  width: 100%;
+}
+
+.garage__car-card-button button {
+  margin: 1rem 1rem;
+}
+
+.garage__car-card-bottom img {
+  transform: rotate(0deg);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -webkit-filter: FlipH;
+          filter: FlipH;
+  -ms-filter: "FlipH";
+  max-width: 15rem;
+  max-height: 30rem;
+}
+
+@media only screen and (min-width: 440px) {
+  .garage {
+    margin: 0 3rem;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .garage__app {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .garage__app-top {
+    -webkit-box-flex: 0.3;
+        -ms-flex: 0.3;
+            flex: 0.3;
+  }
+  .garage__app-bottom {
+    -webkit-box-flex: 0.7;
+        -ms-flex: 0.7;
+            flex: 0.7;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .garage {
+    margin: 2rem 2rem;
+  }
+  .garage__app {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .garage__app-top {
+    -webkit-box-flex: 0.4;
+        -ms-flex: 0.4;
+            flex: 0.4;
+    max-width: 25rem;
+  }
+  .garage__app-bottom {
+    -webkit-box-flex: 0.6;
+        -ms-flex: 0.6;
+            flex: 0.6;
+  }
+  .garage__car-card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    max-height: 25rem;
+    max-width: 65rem;
+  }
+  .garage__car-card-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-right: 1rem;
+  }
+  .garage__car-card-bottom img {
+    max-width: 37.5rem;
+    max-height: 20rem;
+  }
+  .garage__car-card-button {
+    -webkit-box-flex: 0.1;
+        -ms-flex: 0.1;
+            flex: 0.1;
+  }
 }
 
 .contact {
@@ -969,6 +1248,7 @@
 
 .contact label {
   font-weight: bold;
+  margin-top: 1rem;
 }
 
 #name,
@@ -976,7 +1256,7 @@
 #dropdown,
 #comment {
   width: 60vw;
-  margin: 1rem 0;
+  margin: 0;
   height: 3rem;
 }
 
@@ -985,7 +1265,7 @@
 }
 
 .radio-div {
-  margin: 1rem 0;
+  margin: 0.2rem 0;
 }
 
 @media only screen and (min-width: 993px) {
@@ -1028,7 +1308,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 2rem;
+  margin: 1rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -1046,24 +1326,32 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 1rem;
 }
 
 .vehicles__title {
-  font-family: "ACME";
+  font-family: "Mulish";
+  font-style: italic;
   margin: 2rem;
+  font-size: 1.5rem;
 }
 
 .vehicles__sub-title {
   font-family: "Mulish";
-  font-style: italic;
   margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.vehicles__searchbyModel {
+  margin: 1rem 0;
+  width: 40%;
 }
 
 .vehicleCard {
   max-width: 23rem;
   max-height: 50rem;
-  padding: 1rem;
-  margin: 1rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
   text-align: center;
   outline: 0.1rem solid grey;
   border: 0.3rem solid transparent;
@@ -1081,15 +1369,16 @@
 
 .vehicleCard__title {
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .vehicleCard__msrp {
+  font-size: 1rem;
   color: grey;
 }
 
 .vehicleCard__imgD {
-  height: 15rem;
+  height: 30%;
   max-height: 30rem;
 }
 
@@ -1110,7 +1399,58 @@
 }
 
 .vehicleCard__btn {
-  margin: 0 0.2rem;
+  margin: 0.1rem;
+  font-size: 0.8rem;
+}
+
+.btn-group.btn-group-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+}
+
+.btn-group.btn-group-toggle label {
+  min-width: 10rem;
+  -webkit-box-flex: 0.24;
+      -ms-flex: 0.24;
+          flex: 0.24;
+  border-radius: 0;
+  margin: 0.2rem;
+}
+
+@media only screen and (min-width: 440px) {
+  .vehicles {
+    margin: 2rem;
+  }
+  .vehicles__title {
+    font-size: 1.8rem;
+  }
+  .vehicles__sub-title {
+    font-size: 1.5rem;
+  }
+  .vehicleCard {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .vehicleCard__title {
+    font-size: 1.5rem;
+  }
+  .vehicleCard__imgD {
+    height: 15rem;
+  }
+  .vehicleCard__btn {
+    margin: 0.3rem;
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -1130,6 +1470,364 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.dealer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.dealer__title {
+  font-family: "Mulish";
+  font-style: italic;
+  text-align: center;
+  margin: 4rem;
+}
+
+.dealer div:first-child {
+  width: 100% !important;
+}
+
+.dealer__list {
+  margin: 2rem 1rem;
+  font-family: "Raleway";
+  line-height: 2.5rem;
+  max-width: 30rem;
+}
+
+.dealer__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dealer__info {
+  text-align: end;
+  margin: 1rem 2rem;
+  color: grey;
+}
+
+.dealer__info-address {
+  color: black;
+}
+
+.dealer__info-tel, .dealer__info-fax {
+  color: rgba(31, 149, 245, 0.918);
+}
+
+.infoWindow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.infoWindow__img {
+  -webkit-box-flex: 0.3;
+      -ms-flex: 0.3;
+          flex: 0.3;
+}
+
+.infoWindow__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.infoWindow__desc {
+  margin-left: 1rem;
+  -webkit-box-flex: 0.7;
+      -ms-flex: 0.7;
+          flex: 0.7;
+}
+
+.gm-style-iw.gm-style-iw-c {
+  max-width: 35rem !important;
+}
+
+.gm-style-mtc {
+  display: none;
+}
+
+@media only screen and (min-width: 700px) {
+  .gm-style-mtc {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .infoWindow__img {
+    display: block;
+    text-align: right;
+  }
+  .dealer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .dealer div:first-child {
+    -webkit-box-flex: 0.5 !important;
+        -ms-flex: 0.5 !important;
+            flex: 0.5 !important;
+  }
+  .dealer__list {
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+    margin-left: 2rem;
+    min-width: 30rem;
+  }
+}
+
+.api {
+  text-align: center;
+}
+
+.api__vehicles {
+  margin: 1rem;
+}
+
+.api__vehicles-form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.transmission {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 440px) {
+  .api {
+    margin: 2rem 3rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .api {
+    margin: 2rem 10rem;
+  }
+}
+
+.warranty {
+  margin: 2rem;
+}
+
+.warranty__detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem 10vw;
+  background-color: #eeecec;
+}
+
+.warranty__detail-head {
+  margin: 0;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 440px) {
+  .warranty {
+    margin: 2rem 5rem;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .warranty__detail {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .warranty {
+    margin: 2rem 14rem;
+  }
+}
+
+.finance {
+  margin: 2rem;
+  text-align: center;
+}
+
+.finance__lotto-type {
+  margin-top: 2rem;
+}
+
+.finance__lotto-numbers {
+  text-align: center;
+  margin: 0.2rem;
+  width: 1.8rem;
+  height: 2.2rem;
+}
+
+.finance__lotto-result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.finance__lotto-buybutton {
+  margin: 2rem;
+}
+
+@media only screen and (min-width: 993px) {
+  .finance {
+    margin: 2rem 10rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .finance {
+    margin: 2rem 18rem;
+  }
+}
+
+.saved-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid grey;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.saved-card-title {
+  font-weight: lighter;
+}
+
+.saved-card-button {
+  text-align: center;
+}
+
+.saved-card-bottom img {
+  transform: rotate(0deg);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -webkit-filter: FlipH;
+          filter: FlipH;
+  -ms-filter: "FlipH";
+  max-width: 15rem;
+  max-height: 30rem;
+}
+
+@media only screen and (min-width: 440px) {
+  .saved {
+    margin: 0 3rem;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .saved {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .saved-card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    max-height: 25rem;
+  }
+  .saved-card-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+    margin-right: 1rem;
+  }
+  .saved-card-bottom {
+    -webkit-box-flex: 0.4;
+        -ms-flex: 0.4;
+            flex: 0.4;
+  }
+  .saved-card-bottom img {
+    max-width: 35rem;
+    max-height: 20rem;
+  }
+  .saved-card-button {
+    -webkit-box-flex: 0.1;
+        -ms-flex: 0.1;
+            flex: 0.1;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .saved {
+    margin: 2rem 10rem;
+  }
 }
 
 a {

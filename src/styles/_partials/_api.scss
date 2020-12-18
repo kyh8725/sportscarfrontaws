@@ -1,0 +1,26 @@
+.api {
+  text-align: center;
+  &__vehicles {
+    margin: 1rem;
+    &-form {
+      flex-direction: column;
+    }
+  }
+}
+.transmission {
+  display: inline-block;
+}
+
+@include small {
+  .api {
+    margin: 2rem 3rem;
+  }
+}
+
+@include tablet {
+}
+@include desk {
+  .api {
+    margin: 2rem 10rem;
+  }
+}
